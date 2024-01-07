@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .signup {
+            background-color: #2ecc71;
+            color: #fff;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login and Signup Form</h1>
+    <div class="container">
+        <a href="signup.html" class="button signup">Signup</a>
+        <a href="login.html" class="button login" id="loginButton">Login</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginButton = document.getElementById("loginButton");
+
+            loginButton.addEventListener("click", function (event) {
+                // Check if user is signed up (you may use your own logic here)
+                const isSignedUp = confirm("Have you signed up?");
+
+                if (!isSignedUp) {
+                    event.preventDefault();
+                    alert("You need to sign up first!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
